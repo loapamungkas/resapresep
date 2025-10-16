@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Makanan Tradisional Indonesia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar container">
+            <h2 class="logo"><a href="index.html">ResapResep</a></h2>
+            <div class="navList">
+                <a href="index.html#tentang">Tentang</a>
+                <a href="all-resep.html">Kategori</a>
+                <a href="all-resep.html">Resep</a>
+                <a href="index.html#kontak">Kontak</a>
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="slideshow-container container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="assets/imgBanner/coto-makasar-banner.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/imgBanner/gudeg-jogja-banner.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="assets/imgBanner/rendang-daging-banner.png" style="width:100%">
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div style="text-align:center" class="dotSlider">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="kategori">
+            <div class="container">
+                <h3>Kategori</h3>
+                <div id="kategoriList" class="kategori-container">
+
+                </div>
+            </div>
+        </div>
+        <section class="resep container">
+            <div class="allResepHome">
+                <h3>Temukan Resep Makanan Favoritmu!</h3>
+                <a class="btn btn-edit" href="all-resep.html">Lihat Semua</a>
+            </div>
+
+            <div id="resepList" class="resep-container">
+
+            </div>
+        </section>
+        <div class="tentang container" id="tentang">
+            <div class="imgLeft">
+                <img src="assets/imgBanner/banner-welcome.png" alt="">
+            </div>
+            <div class="contentRight">
+                <h3>Tentang Kami</h3>
+                <p>ResapResep hadir sebagai panduan praktis bagi siapa saja yang ingin mencoba berbagai resep masakan
+                    dengan mudah. Kami menyajikan resep-resep pilihan yang dapat diikuti oleh pemula hingga yang sudah
+                    berpengalaman di dapur.</p><br>
+                <p>Dengan tampilan yang sederhana dan fitur pencarian yang memudahkan, kamu bisa menemukan inspirasi
+                    masakan untuk berbagai kesempatan mulai dari makanan utama, camilan, hingga hidangan penutup.</p>
+                <br>
+                <p>Jadikan memasak sebagai aktivitas yang menyenangkan dan penuh kreasi setiap hari.</p>
+            </div>
+        </div>
+        <div class="testimoni-container">
+            <div class="testimoni container">
+                <div class="topContent">
+                    <div class="contentLeft">
+                        <h3>Testimoni</h3>
+                        <h2 class="headingText">Apa Kata <span class="boldText">Mereka?</span></h2>
+                        <p>Kami percaya pengalaman pengguna adalah hal terpenting. Berikut ini beberapa tanggapan dari
+                            mereka
+                            yang telah mencoba berbagai resep kami.</p>
+                    </div>
+                    <div class="contentRight">
+                        <div class="cardTestimoni">
+                            <div class="headingTestimoni">
+                                <div class="leftContent">
+                                    <img class="profilePhoto" src="assets/imgBanner/banner-welcome.png" alt="">
+                                    <div>
+                                        <p class="nameTesti">Amri Dika</p>
+                                        <p class="workTesti">Pengusaha Sukses</p>
+                                    </div>
+                                </div>
+                                <div class="rightContent">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                </div>
+                            </div>
+                            <p class="textTesti">Sangat membantu saat ingin masak cepat tapi tetap enak. UI websitenya
+                                juga
+                                nyaman banget
+                                digunakan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomContent">
+                    <div class="contentRight">
+                        <div class="cardTestimoni">
+                            <div class="headingTestimoni">
+                                <div class="leftContent">
+                                    <img class="profilePhoto" src="assets/imgBanner/banner-welcome.png" alt="">
+                                    <div>
+                                        <p class="nameTesti">Arif Pratama</p>
+                                        <p class="workTesti">Mahasiswa</p>
+                                    </div>
+                                </div>
+                                <div class="rightContent">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                </div>
+                            </div>
+                            <p class="textTesti">Sangat membantu saat ingin masak cepat tapi tetap enak. UI websitenya
+                                juga
+                                nyaman banget
+                                digunakan.</p>
+                        </div>
+                    </div>
+                    <div class="contentRight">
+                        <div class="cardTestimoni">
+                            <div class="headingTestimoni">
+                                <div class="leftContent">
+                                    <img class="profilePhoto" src="assets/imgBanner/banner-welcome.png" alt="">
+                                    <div>
+                                        <p class="nameTesti">Dina</p>
+                                        <p class="workTesti">Ibu Rumah Tangga</p>
+                                    </div>
+                                </div>
+                                <div class="rightContent">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                    <img src="assets/star-icon.svg" alt="">
+                                </div>
+                            </div>
+                            <p class="textTesti">Saya tidak pernah menyangka memasak bisa semudah ini! Resepnya lengkap
+                                dan mudah diikuti. Terima kasih!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="saran-container" id="kontak">
+            <div class="saran container">
+                <div class="topContent">
+                    <div class="contentLeft">
+                        <h3>Kontak & Saran</h3>
+                        <h2 class="headingText">Kami Senang Mendengar <span class="boldText">Masukan dari Anda</span>
+                        </h2>
+                        <p>Jika kamu memiliki pertanyaan, saran, atau ingin berbagi pengalaman setelah mencoba resep di
+                            website ini, jangan ragu untuk menghubungi kami.<br><br>Setiap masukan yang kamu kirimkan
+                            akan
+                            membantu kami dalam mengembangkan fitur dan konten agar menjadi lebih baik lagi.</p>
+                    </div>
+                    <div class="contentRight">
+                        <div class="form-group-saran">
+                            <form id="saranForm">
+                                <div class="form-group">
+                                    <label>Nama</label>
+                                    <input type="text" name="name" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Profesi</label>
+                                    <input type="text" name="email" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Pesan</label>
+                                    <textarea name="description" required></textarea>
+                                </div>
+                                <button class="btn btn-edit" type="submit">Kirim</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer container">
+            <h2 class="logo"><a href="index.html">ResapResep</a></h2>
+            <div class="right-content">
+                <div class="navList">
+                    <a href="index.html#tentang">Tentang</a>
+                    <a href="all-resep.html">Kategori</a>
+                    <a href="all-resep.html">Resep</a>
+                    <a href="index.html#kontak">Kontak</a>
+                </div>
+                <p>Copyright © 2025 Resap Resep. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="resep.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

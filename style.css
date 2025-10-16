@@ -1,0 +1,152 @@
+*{
+  text-decoration: none;
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  color: #2e2e2e;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+p{
+  line-height: 1.5;
+}
+body {
+  margin: 0px;
+  background-color: #FFF8EE;
+}
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+header{
+  background-color: #FFB435;
+  padding: 35px 0;
+}
+footer{
+  background-color: #FFB435;
+  padding: 30px 0;
+}
+.logo a{
+  font-weight: 800;
+  font-size: 24px;
+  font-style: italic;
+  color: #ffffff;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .right-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+.footer .right-content p{
+  color: #ffffff;
+}
+.navList{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.navList a{
+  color: #ffffff;
+}
+.navList a:hover{
+  text-decoration: underline;
+}
+.breadcrumbs{
+  margin-top: 40px;
+  font-size: 14px;
+}
+.breadcrumbs a{
+  color: #666666;
+}
+select {
+  width: 220px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.banner{
+  background: linear-gradient(#FFB435, rgb(255, 255, 255));
+  padding: 60px 0;
+}
+.slideshow-container {
+  max-width: 1280px;
+  max-height: 500px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.mySlides {
+  display: none;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.374);
+}
+
+.dotSlider{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

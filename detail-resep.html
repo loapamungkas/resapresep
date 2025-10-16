@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Resep - Resap Resep</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar container">
+            <h2 class="logo"><a href="index.html">ResapResep</a></h2>
+            <div class="navList">
+                <a href="index.html#tentang">Tentang</a>
+                <a href="all-resep.html">Kategori</a>
+                <a href="all-resep.html">Resep</a>
+                <a href="index.html#kontak">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a>
+            <a href="all-resep.html">/ All Resep</a>
+            <span id="nameResep"></span>
+        </div>
+        <div id="detailResep" class="detailResepContainer">
+            <!-- Detail resep akan di-render lewat JavaScript -->
+        </div>
+
+        <div class="rekomendasiContainer">
+            <h3>Rekomendasi Resep Makanan Favoritmu!</h3>
+            <div id="rekomendasiList" class="resep-container">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer container">
+            <h2 class="logo"><a href="index.html">ResapResep</a></h2>
+            <div class="right-content">
+                <div class="navList">
+                    <a href="index.html#tentang">Tentang</a>
+                    <a href="all-resep.html">Kategori</a>
+                    <a href="all-resep.html">Resep</a>
+                    <a href="index.html#kontak">Kontak</a>
+                </div>
+                <p>Copyright © 2025 Resap Resep. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="resep.js"></script>
+</body>
+
+</html>
